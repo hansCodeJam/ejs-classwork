@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/style.css" type="text/css" >
+    </head>
+    <body>
+        <%- include ('../partials/header') %> 
+        <h1>Hello location <%=` ${firstName} ${lastName} `%> </h1>
+        <p><%= color %>, <%= car %></p>
+        <img src ="/assets/download.jpeg" alt="image" />
+        <div>
+            <ul>
+                <% places.forEach(({city, state}, idx) => {%>
+                   <li><%= idx+1 %>. <%= city %>, <%= state %>   </li> 
+                <%}) %> 
+            </ul>
+        </div>
+    </body>
+</html>
